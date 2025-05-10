@@ -28,43 +28,7 @@ export default function OpenPacksPage() {
       id: "base",
       name: "Base Set",
       image: "/placeholder.svg?height=200&width=150&text=Base+Set",
-      description: "The original Pokémon cards featuring Charizard, Blastoise, and Venusaur!",
       color: "from-red-500 to-red-700",
-    },
-    {
-      id: "jungle",
-      name: "Jungle",
-      image: "/placeholder.svg?height=200&width=150&text=Jungle",
-      description: "Expand your collection with Pokémon from the jungle regions!",
-      color: "from-green-500 to-green-700",
-    },
-    {
-      id: "fossil",
-      name: "Fossil",
-      image: "/placeholder.svg?height=200&width=150&text=Fossil",
-      description: "Ancient Pokémon resurrected from fossils join your collection!",
-      color: "from-amber-500 to-amber-700",
-    },
-    {
-      id: "team-rocket",
-      name: "Team Rocket",
-      image: "/placeholder.svg?height=200&width=150&text=Team+Rocket",
-      description: "Dark Pokémon and Team Rocket members cause trouble!",
-      color: "from-purple-500 to-purple-700",
-    },
-    {
-      id: "gym-heroes",
-      name: "Gym Heroes",
-      image: "/placeholder.svg?height=200&width=150&text=Gym+Heroes",
-      description: "Pokémon trained by the Gym Leaders of Kanto!",
-      color: "from-blue-500 to-blue-700",
-    },
-    {
-      id: "gym-challenge",
-      name: "Gym Challenge",
-      image: "/placeholder.svg?height=200&width=150&text=Gym+Challenge",
-      description: "More powerful Pokémon from the Gym Leaders of Kanto!",
-      color: "from-indigo-500 to-indigo-700",
     },
   ]
 
@@ -342,16 +306,16 @@ export default function OpenPacksPage() {
                       <Card
                         className={cn(
                           "h-60 relative overflow-hidden",
-                          card.type === "Pokémon" && "bg-gradient-to-b from-yellow-100 to-yellow-300",
-                          card.type === "Trainer" && "bg-gradient-to-b from-purple-100 to-purple-300",
-                          card.type === "Energy" && "bg-gradient-to-b from-gray-100 to-gray-300",
+                          card.type === "REWARDS" && "bg-gradient-to-b from-yellow-100 to-yellow-300",
+                          card.type === "GOOD" && "bg-gradient-to-b from-purple-100 to-purple-300",
+                          card.type === "EPIC" && "bg-gradient-to-b from-gray-100 to-gray-300",
                           card.rarity === "Rare Holo" && "ring-2 ring-yellow-500",
                         )}
                       >
                         <div className="p-2 h-full flex flex-col">
                           <div className="flex justify-between items-center mb-1">
                             <span className="text-xs font-bold">{card.name}</span>
-                            {card.type === "Pokémon" && <span className="text-xs font-bold">HP {card.hp}</span>}
+                            {card.type === "REWARDS" && <span className="text-xs font-bold">HP {card.hp}</span>}
                           </div>
 
                           <div className="bg-white rounded-sm flex-grow mb-2 relative">
