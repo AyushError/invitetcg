@@ -18,7 +18,7 @@ export default function HomePage() {
               <h2 className="text-2xl font-bold mb-4 text-white">Open Packs</h2>
               <div className="mb-4 relative">
                 <img
-                  src="/placeholder.svg?height=200&width=300&text=Booster+Packs"
+                  src="/1.png?height=200&width=300&text=Booster+Packs"
                   alt="Open Packs"
                   className="mx-auto rounded-lg shadow-lg"
                 />
