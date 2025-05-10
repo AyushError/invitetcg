@@ -13,7 +13,7 @@ export default function HomePage() {
         </header>
 
 
-          <Card className="bg-gradient-to-br from-purple-500 to-purple-700 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+         <div> <Card className="bg-gradient-to-br from-purple-500 to-purple-700 border-0 shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
             <CardContent className="p-6 text-center">
               <h2 className="text-2xl font-bold mb-4 text-white">Open Packs</h2>
               <div className="mb-4 relative">
