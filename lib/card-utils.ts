@@ -63,157 +63,11 @@ function getCardPoolBySet(setId: string, rarity: CardRarity): any[] {
 
   // Base set Pokémon
   const baseSetPokemon = [
-    { name: "Pikachu", type: "Pokémon", pokemonType: "Lightning", hp: 60, rarity },
+    { name: "sutta", type: "Pokémon", pokemonType: "Lightning", hp: 60, rarity },
     { name: "Charizard", type: "Pokémon", pokemonType: "Fire", hp: 120, rarity },
     { name: "Blastoise", type: "Pokémon", pokemonType: "Water", hp: 100, rarity },
     { name: "Venusaur", type: "Pokémon", pokemonType: "Grass", hp: 100, rarity },
-    { name: "Mewtwo", type: "Pokémon", pokemonType: "Psychic", hp: 80, rarity },
-    { name: "Alakazam", type: "Pokémon", pokemonType: "Psychic", hp: 80, rarity },
-    { name: "Machamp", type: "Pokémon", pokemonType: "Fighting", hp: 100, rarity },
-    { name: "Gyarados", type: "Pokémon", pokemonType: "Water", hp: 100, rarity },
-    { name: "Raichu", type: "Pokémon", pokemonType: "Lightning", hp: 80, rarity },
-    { name: "Zapdos", type: "Pokémon", pokemonType: "Lightning", hp: 90, rarity },
-    { name: "Articuno", type: "Pokémon", pokemonType: "Water", hp: 90, rarity },
-    { name: "Moltres", type: "Pokémon", pokemonType: "Fire", hp: 90, rarity },
-  ]
-
-  // Jungle set Pokémon
-  const junglePokemon = [
-    { name: "Snorlax", type: "Pokémon", pokemonType: "Normal", hp: 90, rarity },
-    { name: "Flareon", type: "Pokémon", pokemonType: "Fire", hp: 80, rarity },
-    { name: "Jolteon", type: "Pokémon", pokemonType: "Lightning", hp: 70, rarity },
-    { name: "Vaporeon", type: "Pokémon", pokemonType: "Water", hp: 80, rarity },
-    { name: "Wigglytuff", type: "Pokémon", pokemonType: "Normal", hp: 80, rarity },
-    { name: "Scyther", type: "Pokémon", pokemonType: "Grass", hp: 70, rarity },
-    { name: "Pinsir", type: "Pokémon", pokemonType: "Grass", hp: 70, rarity },
-    { name: "Vileplume", type: "Pokémon", pokemonType: "Grass", hp: 80, rarity },
-    { name: "Victreebel", type: "Pokémon", pokemonType: "Grass", hp: 80, rarity },
-    { name: "Kangaskhan", type: "Pokémon", pokemonType: "Normal", hp: 90, rarity },
-  ]
-
-  // Fossil set Pokémon
-  const fossilPokemon = [
-    { name: "Aerodactyl", type: "Pokémon", pokemonType: "Fighting", hp: 60, rarity },
-    { name: "Articuno", type: "Pokémon", pokemonType: "Water", hp: 70, rarity },
-    { name: "Ditto", type: "Pokémon", pokemonType: "Normal", hp: 50, rarity },
-    { name: "Dragonite", type: "Pokémon", pokemonType: "Colorless", hp: 100, rarity },
-    { name: "Gengar", type: "Pokémon", pokemonType: "Psychic", hp: 80, rarity },
-    { name: "Haunter", type: "Pokémon", pokemonType: "Psychic", hp: 60, rarity },
-    { name: "Hitmonlee", type: "Pokémon", pokemonType: "Fighting", hp: 70, rarity },
-    { name: "Hypno", type: "Pokémon", pokemonType: "Psychic", hp: 90, rarity },
-    { name: "Kabutops", type: "Pokémon", pokemonType: "Fighting", hp: 70, rarity },
-    { name: "Lapras", type: "Pokémon", pokemonType: "Water", hp: 80, rarity },
-  ]
-
-  // Team Rocket set Pokémon
-  const teamRocketPokemon = [
-    { name: "Dark Alakazam", type: "Pokémon", pokemonType: "Psychic", hp: 60, rarity },
-    { name: "Dark Arbok", type: "Pokémon", pokemonType: "Grass", hp: 60, rarity },
-    { name: "Dark Blastoise", type: "Pokémon", pokemonType: "Water", hp: 80, rarity },
-    { name: "Dark Charizard", type: "Pokémon", pokemonType: "Fire", hp: 100, rarity },
-    { name: "Dark Dragonite", type: "Pokémon", pokemonType: "Colorless", hp: 90, rarity },
-    { name: "Dark Dugtrio", type: "Pokémon", pokemonType: "Fighting", hp: 70, rarity },
-    { name: "Dark Golbat", type: "Pokémon", pokemonType: "Grass", hp: 60, rarity },
-    { name: "Dark Gyarados", type: "Pokémon", pokemonType: "Water", hp: 90, rarity },
-    { name: "Dark Hypno", type: "Pokémon", pokemonType: "Psychic", hp: 70, rarity },
-    { name: "Dark Machamp", type: "Pokémon", pokemonType: "Fighting", hp: 80, rarity },
-  ]
-
-  // Gym Heroes set Pokémon
-  const gymHeroesPokemon = [
-    { name: "Brock's Rhydon", type: "Pokémon", pokemonType: "Fighting", hp: 80, rarity },
-    { name: "Erika's Clefable", type: "Pokémon", pokemonType: "Normal", hp: 70, rarity },
-    { name: "Erika's Vileplume", type: "Pokémon", pokemonType: "Grass", hp: 80, rarity },
-    { name: "Lt. Surge's Electabuzz", type: "Pokémon", pokemonType: "Lightning", hp: 70, rarity },
-    { name: "Lt. Surge's Raichu", type: "Pokémon", pokemonType: "Lightning", hp: 80, rarity },
-    { name: "Misty's Golduck", type: "Pokémon", pokemonType: "Water", hp: 70, rarity },
-    { name: "Misty's Gyarados", type: "Pokémon", pokemonType: "Water", hp: 100, rarity },
-    { name: "Misty's Tentacruel", type: "Pokémon", pokemonType: "Water", hp: 80, rarity },
-    { name: "Rocket's Hitmonchan", type: "Pokémon", pokemonType: "Fighting", hp: 70, rarity },
-    { name: "Rocket's Scyther", type: "Pokémon", pokemonType: "Grass", hp: 70, rarity },
-  ]
-
-  // Gym Challenge set Pokémon
-  const gymChallengePokemon = [
-    { name: "Blaine's Arcanine", type: "Pokémon", pokemonType: "Fire", hp: 90, rarity },
-    { name: "Blaine's Charizard", type: "Pokémon", pokemonType: "Fire", hp: 100, rarity },
-    { name: "Brock's Ninetales", type: "Pokémon", pokemonType: "Fire", hp: 80, rarity },
-    { name: "Giovanni's Gyarados", type: "Pokémon", pokemonType: "Water", hp: 100, rarity },
-    { name: "Giovanni's Machamp", type: "Pokémon", pokemonType: "Fighting", hp: 100, rarity },
-    { name: "Giovanni's Nidoking", type: "Pokémon", pokemonType: "Grass", hp: 90, rarity },
-    { name: "Giovanni's Persian", type: "Pokémon", pokemonType: "Normal", hp: 70, rarity },
-    { name: "Koga's Beedrill", type: "Pokémon", pokemonType: "Grass", hp: 80, rarity },
-    { name: "Koga's Ditto", type: "Pokémon", pokemonType: "Normal", hp: 50, rarity },
-    { name: "Sabrina's Alakazam", type: "Pokémon", pokemonType: "Psychic", hp: 80, rarity },
-  ]
-
-  // Trainer cards (for all sets)
-  const trainerCards = [
-    {
-      name: "Professor Oak",
-      type: "Trainer",
-      subtype: "Supporter",
-      rarity,
-      description: "Discard your hand and draw 7 cards.",
-    },
-    { name: "Bill", type: "Trainer", subtype: "Supporter", rarity, description: "Draw 2 cards." },
-    {
-      name: "Potion",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Remove 2 damage counters from 1 of your Pokémon.",
-    },
-    {
-      name: "Super Potion",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Remove 4 damage counters from 1 of your Pokémon. Discard 1 Energy card attached to that Pokémon.",
-    },
-    {
-      name: "Energy Retrieval",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Put 2 basic Energy cards from your discard pile into your hand.",
-    },
-    {
-      name: "Energy Removal",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Discard 1 Energy card attached to 1 of your opponent's Pokémon.",
-    },
-    {
-      name: "Switch",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Switch your Active Pokémon with 1 of your Benched Pokémon.",
-    },
-    {
-      name: "Gust of Wind",
-      type: "Trainer",
-      subtype: "Item",
-      rarity,
-      description: "Choose 1 of your opponent's Benched Pokémon and switch it with their Active Pokémon.",
-    },
-  ]
-
-  // Energy cards (for all sets)
-  const energyCards = [
-    { name: "Fire Energy", type: "Energy", energyType: "Fire", rarity: "Common" },
-    { name: "Water Energy", type: "Energy", energyType: "Water", rarity: "Common" },
-    { name: "Grass Energy", type: "Energy", energyType: "Grass", rarity: "Common" },
-    { name: "Lightning Energy", type: "Energy", energyType: "Lightning", rarity: "Common" },
-    { name: "Psychic Energy", type: "Energy", energyType: "Psychic", rarity: "Common" },
-    { name: "Fighting Energy", type: "Energy", energyType: "Fighting", rarity: "Common" },
-    { name: "Darkness Energy", type: "Energy", energyType: "Darkness", rarity: "Common" },
-    { name: "Metal Energy", type: "Energy", energyType: "Metal", rarity: "Common" },
-    { name: "Fairy Energy", type: "Energy", energyType: "Fairy", rarity: "Common" },
-    { name: "Double Colorless Energy", type: "Energy", energyType: "Colorless", rarity: "Uncommon" },
-  ]
+    ]
 
   // Add attacks to Pokémon cards
   const addAttacksToPokemon = (pokemon: any[]) => {
@@ -246,30 +100,10 @@ function getCardPoolBySet(setId: string, rarity: CardRarity): any[] {
     case "base":
       pokemonPool = baseSetPokemon
       break
-    case "jungle":
-      pokemonPool = junglePokemon
-      break
-    case "fossil":
-      pokemonPool = fossilPokemon
-      break
-    case "team-rocket":
-      pokemonPool = teamRocketPokemon
-      break
-    case "gym-heroes":
-      pokemonPool = gymHeroesPokemon
-      break
-    case "gym-challenge":
-      pokemonPool = gymChallengePokemon
-      break
-    default:
-      pokemonPool = baseSetPokemon
   }
 
   // Filter the card pool based on rarity
   const filteredPokemonPool = pokemonPool.filter((card) => card.rarity === rarity)
-  const filteredTrainerPool = trainerCards.filter((card) => card.rarity === rarity)
-  const filteredEnergyPool = energyCards.filter((card) => card.rarity === rarity)
-
   // Add attacks to Pokémon cards
   const pokemonWithAttacks = addAttacksToPokemon(filteredPokemonPool)
 
@@ -289,18 +123,17 @@ function getCardPoolBySet(setId: string, rarity: CardRarity): any[] {
   if (cardPool.length === 0) {
     return [
       {
-        name: "Pikachu",
+        name: "sutta",
         type: "Pokémon",
         pokemonType: "Lightning",
         hp: 60,
         rarity,
         attacks: [
           {
-            name: "Thunder Shock",
+            name: "puff",
             damage: 20,
-            description: "Flip a coin. If heads, the Defending Pokémon is now Paralyzed.",
+            description: "cough",
           },
-          { name: "Quick Attack", damage: 30, description: "Flip a coin. If heads, this attack does 10 more damage." },
         ],
         set: setId,
       },
