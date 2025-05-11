@@ -41,12 +41,7 @@ export default function HomePage() {
             >
               View Your gifts
             </Button>
-          </Link>
-          <Link href="/tutorial">
-            <Button className="bg-white hover:bg-gray-100 text-blue-900 font-bold px-8 py-6 text-lg">
-              How To Play
-            </Button>
-          </Link>
+  
         </div>
       </div>
     </div>
