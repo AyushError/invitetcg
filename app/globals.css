@@ -3,8 +3,7 @@
 @tailwind utilities;
 
 body {
-  background-color: black;
-  color: white;
+  
   font-family: Berlin Sans FB, Helvetica, sans-serif;
 }
 
