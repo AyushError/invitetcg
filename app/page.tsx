@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -5,7 +7,7 @@ import { Sparkles } from "lucide-react"
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-blue-600 to-blue-800 text-white">
+    <div className="min-h-screen bg-gradient-to-b from-black-600 to-black-800 text-white">
       <div className="container mx-auto px-4 py-12">
         <header className="mb-12 text-center">
           <h1 className="text-4xl font-bold mb-4 text-yellow-300 drop-shadow-lg">Welcome To Ayush's Birthday Invite</h1>
