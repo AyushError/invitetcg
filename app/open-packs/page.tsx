@@ -28,7 +28,7 @@ export default function OpenPacksPage() {
     {
       id: "base",
       name: "Base Set",
-      image: "/Untitled design (1).png?height=200&width=150&text=Base+Set",
+      image: "/PACK.png?height=200&width=150&text=Base+Set",
       color: "from-red-500 to-red-700",
     },
   ]
