@@ -24,8 +24,21 @@ export default function CollectionPage() {
   useEffect(() => {
     // Get the user's collection
     const userCollection = getCollection()
-    setCollection(userCollection)
-    setFilteredCards(userCollection)
+
+if (userCollection.length > 0) {
+  // Get the timestamp from the first card ID
+  const firstTimestamp = userCollection[0].id.split("-")[1]
+
+  // Filter only cards from the same first pull
+  const firstPullCards = userCollection.filter(card => card.id.includes(firstTimestamp))
+
+  setCollection(firstPullCards)
+  setFilteredCards(firstPullCards)
+} else {
+  setCollection([])
+  setFilteredCards([])
+}
+
   }, [])
 
   useEffect(() => {
