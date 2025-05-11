@@ -170,11 +170,6 @@ export default function OpenPacksPage() {
                     <Card className="bg-gradient-to-t from-slate-900 to-slate-800 p-3 h-64 shadow-xl border border-yellow-300">
                       <div className="text-white font-bold mb-1">{card.name}</div>
                       <div className="bg-white rounded h-40 overflow-hidden mb-2">
-                        <img
-                          src={`/placeholder.svg?text=${card.name}`}
-                          alt={card.name}
-                          className="w-full h-full object-cover"
-                        />
                       </div>
                       <div className="text-xs text-yellow-400">{card.rarity}</div>
                     </Card>
