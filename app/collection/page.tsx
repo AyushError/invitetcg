@@ -43,10 +43,6 @@ export default function CollectionPage() {
     // Filter by tab/type
     if (currentTab === "pokemon") {
       filtered = filtered.filter((card) => card.type === "Pokémon")
-    } else if (currentTab === "trainer") {
-      filtered = filtered.filter((card) => card.type === "Trainer")
-    } else if (currentTab === "energy") {
-      filtered = filtered.filter((card) => card.type === "Energy")
     }
 
     setFilteredCards(filtered)
@@ -107,13 +103,7 @@ export default function CollectionPage() {
                 All ({collection.length})
               </TabsTrigger>
               <TabsTrigger value="pokemon" className="data-[state=active]:bg-gray-700">
-                Pokémon ({getTypeCount("Pokémon")})
-              </TabsTrigger>
-              <TabsTrigger value="trainer" className="data-[state=active]:bg-gray-700">
-                Trainer ({getTypeCount("Trainer")})
-              </TabsTrigger>
-              <TabsTrigger value="energy" className="data-[state=active]:bg-gray-700">
-                Energy ({getTypeCount("Energy")})
+                Your Cards({getTypeCount("Pokémon")})
               </TabsTrigger>
             </TabsList>
 
@@ -158,8 +148,6 @@ export default function CollectionPage() {
                         <div className="flex justify-between text-xs text-gray-700">
                           <span>{card.type}</span>
                           {card.type === "Pokémon" && <span>{card.pokemonType}</span>}
-                          {card.type === "Energy" && <span>{card.energyType}</span>}
-                          {card.type === "Trainer" && <span>{card.subtype}</span>}
                         </div>
                       </div>
                     </Card>
@@ -168,7 +156,7 @@ export default function CollectionPage() {
               )}
             </TabsContent>
 
-            {["pokemon", "trainer", "energy"].map((tabValue) => (
+            {["pokemon"].map((tabValue) => (
               <TabsContent key={tabValue} value={tabValue} className="mt-6">
                 {filteredCards.length === 0 ? (
                   <div className="text-center py-12 text-gray-400">
@@ -185,8 +173,6 @@ export default function CollectionPage() {
                         className={cn(
                           "h-64 relative overflow-hidden hover:-translate-y-1 transition-transform duration-200 cursor-pointer",
                           card.type === "Pokémon" && "bg-gradient-to-b from-yellow-100 to-yellow-300",
-                          card.type === "Trainer" && "bg-gradient-to-b from-purple-100 to-purple-300",
-                          card.type === "Energy" && "bg-gradient-to-b from-gray-100 to-gray-300",
                           card.rarity === "Rare Holo" && "ring-2 ring-yellow-500",
                         )}
                         onClick={() => handleCardClick(card)}
@@ -210,8 +196,6 @@ export default function CollectionPage() {
                           <div className="flex justify-between text-xs text-gray-700">
                             <span>{card.type}</span>
                             {card.type === "Pokémon" && <span>{card.pokemonType}</span>}
-                            {card.type === "Energy" && <span>{card.energyType}</span>}
-                            {card.type === "Trainer" && <span>{card.subtype}</span>}
                           </div>
                         </div>
                       </Card>
@@ -249,8 +233,7 @@ export default function CollectionPage() {
                   className={cn(
                     "w-64 h-80 rounded-lg overflow-hidden mb-4",
                     selectedCard.type === "Pokémon" && "bg-gradient-to-b from-yellow-100 to-yellow-300",
-                    selectedCard.type === "Trainer" && "bg-gradient-to-b from-purple-100 to-purple-300",
-                    selectedCard.type === "Energy" && "bg-gradient-to-b from-gray-100 to-gray-300",
+            
                     selectedCard.rarity === "Rare Holo" && "ring-2 ring-yellow-500",
                   )}
                 >
