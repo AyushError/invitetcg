@@ -123,6 +123,12 @@ if (userCollection.length > 0) {
             <TabsContent value="all" className="mt-6">
               {filteredCards.length === 0 ? (
                 <div className="text-center py-12 text-gray-400">
+                  <img
+                    src={card.image || `/placeholder.svg?height=140&width=120&text=${encodeURIComponent(card.name)}`}
+                    alt={card.name}
+                    className="w-full h-full object-cover"
+                    />
+
                   <p className="text-xl mb-4">No cards found</p>
                   <Link href="/open-packs">
                     <Button className="bg-yellow-400 hover:bg-yellow-300 text-gray-900">Open Some Packs</Button>
