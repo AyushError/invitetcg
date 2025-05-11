@@ -9,6 +9,7 @@ const baseSetPokemon = [
     id: "rai1",
     name: "Invite",
     type: CardType.POKEMON,
+    image: "/2.png" ,
     pokemonType: "Electric",
     hp: 90,
     stage: "Basic",
@@ -16,12 +17,13 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
-    image: "/2.png" ,
+    
   },
   {
     id: "ivy1",
     name: "dresscode",
     type: CardType.POKEMON,
+    image: "/5.png" ,
     pokemonType: "Fashion",
     hp: 70,
     stage: "Basic",
@@ -29,12 +31,13 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
-    image: "/5.png" ,
+   
   },
   {
     id: "ivy2",
     name: "kareoke",
     type: CardType.POKEMON,
+    image: "/3.png" ,
     pokemonType: "Sound",
     hp: 70,
     stage: "Basic",
@@ -42,12 +45,13 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
-    image: "/3.png" ,
+    
   },
   {
     id: "bulb1",
     name: "cocktail",
     type: CardType.POKEMON,
+    image: "/4.png" ,
     pokemonType: "Poison",
     hp: 60,
     stage: "Basic",
@@ -55,12 +59,13 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Ultra Rare",
     alwaysInclude: false,
-    image: "/4.png" ,
+    
   },
   {
     id: "sutta",
     name: "sutta",
     type: CardType.POKEMON,
+    image: "/12.png" ,
     pokemonType: "Smoke",
     hp: 60,
     stage: "Basic",
@@ -68,7 +73,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Ultra Rare",
     alwaysInclude: false,
-    image: "/12.png" ,
+    
   }
 ]
 
