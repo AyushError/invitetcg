@@ -43,6 +43,10 @@ export default function HomePage() {
             >
               View Your gifts
             </Button>
+            </Link>
+          </div>
+
+
   
         </div>
       </div>
