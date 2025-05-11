@@ -6,18 +6,6 @@ type CardRarity = "Common" | "Uncommon" | "Rare" | "Rare Holo" | "Ultra Rare"
 
 const baseSetPokemon = [
   {
-    id: "sutta",
-    name: "sutta",
-    type: CardType.POKEMON,
-    pokemonType: "Smoke",
-    hp: 60,
-    stage: "Basic",
-    attacks: [{ name: "puff", damage: 10, effect: "coughing" }],
-    retreatCost: 1,
-    rarity: "Common",
-    alwaysInclude: true,
-  },
-  {
     id: "rai1",
     name: "Invite",
     type: CardType.POKEMON,
@@ -25,18 +13,6 @@ const baseSetPokemon = [
     hp: 90,
     stage: "Basic",
     attacks: [{ name: "location", damage: 20, effect: "u go to kyoto and say my name" }],
-    retreatCost: 1,
-    rarity: "Common",
-    alwaysInclude: true,
-  },
-  {
-    id: "bulb1",
-    name: "cocktail",
-    type: CardType.POKEMON,
-    pokemonType: "Poison",
-    hp: 60,
-    stage: "Basic",
-    attacks: [{ name: "nausea", damage: 20, effect: "gives u nausea effect." }],
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
@@ -50,7 +26,8 @@ const baseSetPokemon = [
     stage: "Basic",
     attacks: [{ name: "your drip", damage: 30 }],
     retreatCost: 1,
-    rarity: "Ultra Rare"
+    rarity: "Common",
+    alwaysInclude: true,
   },
   {
     id: "ivy2",
@@ -61,27 +38,50 @@ const baseSetPokemon = [
     stage: "Basic",
     attacks: [{ name: "do your song", damage: 30 }],
     retreatCost: 1,
-    rarity: "Ultra Rare"
+    rarity: "Common",
+    alwaysInclude: true,
   },
+  {
+    id: "bulb1",
+    name: "cocktail",
+    type: CardType.POKEMON,
+    pokemonType: "Poison",
+    hp: 60,
+    stage: "Basic",
+    attacks: [{ name: "nausea", damage: 20, effect: "gives u nausea effect." }],
+    retreatCost: 1,
+    rarity: "Ultra Rare",
+    alwaysInclude: false,
+  },
+  {
+    id: "sutta",
+    name: "sutta",
+    type: CardType.POKEMON,
+    pokemonType: "Smoke",
+    hp: 60,
+    stage: "Basic",
+    attacks: [{ name: "puff", damage: 10, effect: "coughing" }],
+    retreatCost: 1,
+    rarity: "Ultra Rare",
+    alwaysInclude: false,
+  }
 ]
 
 export function openBoosterPack(): any[] {
   const cards: any[] = []
 
-  // Always include the guaranteed ones
+  // Add always-included cards
   const guaranteed = baseSetPokemon.filter(card => card.alwaysInclude)
   cards.push(...guaranteed)
 
-  // Add a 20% chance to pull one ultra rare
-  const ultraRares = baseSetPokemon.filter(c => c.rarity === "Ultra Rare")
+  // 20% chance to include one ultra rare card
+  const ultraRares = baseSetPokemon.filter(card => card.rarity === "Ultra Rare")
   if (Math.random() < 0.2 && ultraRares.length > 0) {
-    const index = Math.floor(Math.random() * ultraRares.length)
-    cards.push(ultraRares[index])
+    const randomIndex = Math.floor(Math.random() * ultraRares.length)
+    cards.push(ultraRares[randomIndex])
   }
 
-  // Add to collection
   addCardsToCollection(cards)
-
   return cards
 }
 
@@ -100,7 +100,7 @@ function addCardsToCollection(cards: any[]): void {
 
     const cardsWithIds = cards.map(card => ({
       ...card,
-      id: `{card.name.toLowerCase().replace(/\s+/g, "-")}-\${Date.now()}-\${Math.random().toString(36).substr(2, 9)}`
+      id: `${card.name.toLowerCase().replace(/\s+/g, "-")}-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
     }))
 
     localStorage.setItem(COLLECTION_KEY, JSON.stringify([...collection, ...cardsWithIds]))
