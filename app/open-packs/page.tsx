@@ -8,15 +8,7 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Sparkles, ArrowLeft, Home } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { openBoosterPack } from "@/lib/card-utils"
-import PackTearer from "@/components/PackTearer"
 
-export default function OpenPacksPage() {
-  return (
-    <main className="flex items-center justify-center min-h-screen bg-black">
-      <PackTearer />
-    </main>
-  )
-}
 
 type BoosterSet = {
   id: string
