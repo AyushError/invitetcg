@@ -16,6 +16,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
+    image: "/2.png" ,
   },
   {
     id: "ivy1",
@@ -28,6 +29,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
+    image: "/5.png" ,
   },
   {
     id: "ivy2",
@@ -40,6 +42,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Common",
     alwaysInclude: true,
+    image: "/3.png" ,
   },
   {
     id: "bulb1",
@@ -52,6 +55,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Ultra Rare",
     alwaysInclude: false,
+    image: "/4.png" ,
   },
   {
     id: "sutta",
@@ -64,6 +68,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Ultra Rare",
     alwaysInclude: false,
+    image: "/1.png" ,
   }
 ]
 
