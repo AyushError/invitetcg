@@ -1,4 +1,4 @@
-import { CardType } from "./types"
+import { CardType, PokemonType, TrainerSubtype } from "./types"
 
 const COLLECTION_KEY = "pokemon_tcg_collection"
 
