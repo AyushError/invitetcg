@@ -68,7 +68,7 @@ const baseSetPokemon = [
     retreatCost: 1,
     rarity: "Ultra Rare",
     alwaysInclude: false,
-    image: "/1.png" ,
+    image: "/12.png" ,
   }
 ]
 
